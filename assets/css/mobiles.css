@@ -270,6 +270,9 @@ body {
     -webkit-transform: translateZ(50px);
             transform: translateZ(50px);
 }
+.social .github:hover a {
+    color: #333;
+}
 .social div:hover.twitter {
     background-color: #0099ff;
 }
@@ -277,7 +280,7 @@ body {
     background-color: #e4405f;
 }
 .social div:hover.github {
-    background-color: #000;
+    background-color: #FFFC00;
 }
 .social div:hover.whatsapp {
     background-color: #25d366;
