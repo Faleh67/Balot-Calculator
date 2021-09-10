@@ -263,11 +263,11 @@ body {
 .balotCalculator .arrow {
     position: absolute;
     width: 95px;
-    height: 95px;
+    height: 50px;
     top: 0;
     left: 50%;
     display: flex;
-    transform: translate(-50%, 45px);
+    transform: translate(-50%, 70px);
     justify-content: center;
     align-items: center;
     font-size: 26px;
@@ -333,7 +333,7 @@ body {
     transform: translateX(-5%);
     font-size: 20px;
     text-align: center;
-    color: #000;
+    color: var(--white);
     backdrop-filter: blur(2px);
     overflow-y: scroll;
 }
