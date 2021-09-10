@@ -1,0 +1,421 @@
+/* ----- GOOGLE FONTS ----- */
+
+/* ----- VARIABLES ----- */
+/* Here website variables ( colors, font sizes, ... ) */
+:root {
+    --header-height: 100vh;
+
+    /* Here website variables ( colors, font sizes, ... ) */
+    /* ----- COLORS ----- */
+    --balck: #000;
+    --white: #fff;
+
+    /* ----- FONT SIZES ----- */
+    --body-font: ( font family );
+    --biggest-font-size: --;
+    --bigger-font-size: --;
+    --big-font-size: --;
+    --h2-font-size: --;
+    --h3-font-size: --;
+    --normal-font-size: --;
+    --small-font-size: --;
+    --smaller-font-size: --;
+    --line-height: --;
+    --font-weight-medium: --;
+    --font-weight-semi-bold: --;
+    --font-weight-bold: --;
+}
+
+/* ----- BASE ----- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Tajawal', sans-serif;
+}
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+/* ----- HEADER AND NAV ----- */
+
+/* ----- BODY ----- */
+body {
+    background: url('../media/backimg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-x: -75px;
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container {
+    position: relative;
+}
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 0px;
+    right: 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.menu .control {
+    position: relative;
+}
+.control i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.5s;
+}
+.control .x {
+    opacity: 0.5;
+}
+.menu:hover .control .x {
+    font-size: 2rem;
+    opacity: 1;
+}
+.control .left {
+    opacity: 0;
+}
+.menu.activate:hover .control .left {
+    font-size: 2rem;
+    opacity: 1;
+}
+.menu.activate .control .x {
+    opacity: 0;
+}
+.menu.activate .control .left {
+    opacity: 0.5;
+}
+.infoLayout {
+    position: fixed;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Tajawal', sans-serif;
+    transition: 0.5s;
+    visibility: visible;
+}
+.infoLayout.activate {
+    visibility: hidden;
+    transform: translateX(100%);
+}
+.infoLayout::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(2.5px);
+    z-index: -10;
+}
+.infoLayout::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    transform: scale(1.1) translate(1px, 1px);
+    z-index: -1;
+}
+.infoLayout img {
+    position: relative;
+    width: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
+}
+.infoLayout h1 {
+    margin-top: 1.5rem;
+    font-size: 1.25em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.75);
+}
+.infoLayout p {
+    margin-top: 0.75rem;
+    font-size: 1.25em;
+    line-height: 30px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    color: var(--white);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2.75);
+}
+.infoLayout .social {
+    position: relative;
+    width: 95%;
+    height: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    flex-shrink: 2;
+    transform: translateY(15px);
+}
+.social div {
+    position: relative;
+    width: 20%;
+    height: 65%;
+    background-color: transparent;
+    margin: 0 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 3rem;
+    text-decoration: none;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 0.5s;
+}
+.social div:hover {
+    cursor: pointer;
+}
+.social .cards a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: 0.5s;
+}
+.social .cards:hover a {
+    color: var(--white);
+    transform: translateZ(50px);
+}
+.social div:hover.twitter {
+    background-color: #0099ff;
+}
+.social div:hover.instagram {
+    background-color: #e4405f;
+}
+.social div:hover.github {
+    background-color: #000;
+}
+.social div:hover.whatsapp {
+    background-color: #25d366;
+}
+.main {
+    position: relative;
+    width: 200%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: 0.5s;
+}
+.main.activate {
+    transform: scaleX(1);
+}
+.mainMenu {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    bottom: 60px;
+    left: 53%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.mainMenu .mainMenuControl {
+    position: relative;
+}
+.mainMenu .mainMenuControl i {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    color: #fff;
+    transition: 0.5s;
+}
+.mainMenu .mainMenuControl .mainMenuLaws {
+    opacity: 0.5;
+}
+.mainMenu:hover .mainMenuControl .mainMenuLaws {
+    font-size: 2rem;
+    opacity: 1;
+}
+.mainMenuControl .mainMenucalc {
+    opacity: 0;
+}
+.mainMenu.calcShow:hover .mainMenuControl .mainMenucalc {
+    font-size: 2rem;
+    opacity: 1;
+}
+.mainMenu.calcShow .mainMenuControl .mainMenuLaws {
+    opacity: 0;
+}
+.mainMenu.calcShow .mainMenuControl .mainMenucalc {
+    opacity: 0.5;
+}
+.main {
+    transform: translateX(-50%);
+}
+.main.calcShow {
+    transform: translateX(50%);
+}
+.mainMenu.calcShow {
+    left: 42.5%;
+}
+.balotCalculator, .laws {
+    position: relative;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+.balotCalculator .title {
+    position: relative;
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 10px;
+}
+.balotCalculator .calculator {
+    position: relative;
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+}
+.balotCalculator .arrow {
+    position: relative;
+    width: 95px;
+    height: 95px;
+    display: flex;
+    transform: translateY(20%);
+    justify-content: center;
+    align-items: center;
+    font-size: 26px;
+    color: rgba(255, 255, 255, 0.5);
+    /* transform: translateY(-250px) */
+}
+.balotCalculator .resultes {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-2.5%);
+}
+.us {
+    /* transform: translateY(-150px) */
+    margin-left: 25px;
+}
+.usInResulte, .themInResulte {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    outline: 0;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    font-size: 26px;
+    text-align: center;
+}
+.usInResulte::placeholder, .themInResulte::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+.usOutResulte, .themOutResulte {
+    position: relative;
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    border: 2px solid rgba(0, 0, 0, 0.25);
+    box-shadow: 1px 1px 15px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    backdrop-filter: blur(2px);
+    font-size: 26px;
+    text-align: center;
+    /* transform: translateY(600%); */
+}
+.usResulteHistory, .themResulteHistory {
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    margin: 10px 0;
+    transform: translateX(-5%);
+    font-size: 20px;
+    text-align: center;
+    color: #000;
+    backdrop-filter: blur(2px);
+    overflow-y: scroll;
+}
+.balotCalculator .btns {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-48%, -250%);
+}
+.btnr, .btnres, .btnbck {
+    width: 45px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+.btnr {
+    
+}
+/* ----- FOOTER ----- */

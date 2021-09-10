@@ -1,0 +1,136 @@
+<html lang="en">
+
+<head>
+    <title>Balot Calculator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!------------ FAVICON ------------>
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/media/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/media/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/media/favicon/favicon-16x16.png">
+    <link rel="manifest" href="./assets/media/favicon/site.webmanifest">
+    <link rel="mask-icon" href="./assets/media/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!------------ REMIX ICONS ------------>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"
+        integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!------------ Fonts ------------>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <!------------ CSS FILES ------------>
+    <!-- Mobiles -->
+    <link rel="stylesheet" href="./assets/css/mobiles.css">
+    <!-- Taplates -->
+    <link rel="stylesheet" href="./assets/css/taplates.css">
+    <!-- Laptops -->
+    <link rel="stylesheet" href="./assets/css/laptops.css">
+    <!-- Desktops -->
+    <link rel="stylesheet" href="./assets/css/desktops.css">
+</head>
+
+<body dir="rtl">
+    <!------------ Header ------------>
+
+    <!------------ Body ------------>
+    <section class="container">
+        <div class="menu">
+            <div class="control">
+                <i class="fa fa-times-circle x" aria-hidden="true"></i>
+                <i class="fa fa-arrow-circle-left left" aria-hidden="true"></i>
+            </div>
+        </div>
+        <section class="infoLayout">
+            <img src="./assets/media/1.jpeg" alt="">
+            <h1>عبدالله القحطاني</h1>
+            <p>مبرمج بايثون<br>مبرمج فرونت-اند<br>مصمم UI/UX</p>
+            <div class="social">
+                <div class="twitter cards">
+                    <a href="https://mobile.twitter.com/igreato1" target="_blanck"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="instagram cards">
+                    <a href="https://instagram.com/igreato1" target="_blanck"><i class="fa fa-instagram"
+                            aria-hidden="true"></i></i></a>
+                </div>
+                <div class="github cards">
+                    <a href="https://github.com/iGreato1" target="_blanck"><i class="fa fa-github"
+                            aria-hidden="true"></i></a>
+                </div>
+                <div class="whatsapp cards">
+                    <a href="https://api.whatsapp.com/message/VCGYIFE6Y3ADG1" target="_blanck"><i class="fa fa-whatsapp"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </section>
+        <section class="main">
+            <div class="mainMenu">
+                <div class="mainMenuControl">
+                    <i class="fa fa-universal-access mainMenuLaws" aria-hidden="true"></i>
+                    <i class="fa fa-calculator mainMenucalc" aria-hidden="true"></i>
+                </div>
+            </div>
+            <section class="balotCalculator">
+                <div class="title">iGreato1</div>
+                <div class="calculator">
+                    <div class="arrow" id="arrow">
+                        <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                    </div>
+                    <div class="resultes">
+                        <div class="us">
+                            <input class="usInResulte" type="text" placeholder="لنا"><br>
+                            <textarea class="usResulteHistory" name="" id="" cols="20" rows="15" disabled></textarea>
+                            <span class="usOutResulte">0</span><br><br>
+                        </div>
+                        <div class="them">
+                            <input class="themInResulte" type="text" placeholder="لهم"><br>
+                            <textarea class="themResulteHistory" name="" id="" cols="20" rows="15" disabled></textarea>
+                            <span class="themOutResulte">0</span><br><br>
+                        </div>
+                    </div>
+                    <div class="btns">
+                        <div class="btnr"><b>تسجيل</b></div>
+                        <div class="btnbck"><b>تراجع</b></div>
+                        <div class="btnres"><b>جديد</b></div>
+                    </div>
+                </div>
+            </section>
+            <section class="laws">
+                <h1 class="lawsTitle">lawsTitle</h1>
+                <div class="lawsContent">
+                    <div class="law l1">
+                        <h3 class="lawTitle"></h3>
+                        <p class="lawDes"></p>
+                    </div>
+                    <div class="law l2">
+                        <h3 class="lawTitle"></h3>
+                        <p class="lawDes"></p>
+                    </div>
+                    <div class="law l3">
+                        <h3 class="lawTitle"></h3>
+                        <p class="lawDes"></p>
+                    </div>
+                    <div class="law l4">
+                        <h3 class="lawTitle"></h3>
+                        <p class="lawDes"></p>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+
+    <!------------ Footer ------------>
+
+    <!------------ JS FILES ------------>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/calculator.js"></script>
+</body>
+
+</html>
