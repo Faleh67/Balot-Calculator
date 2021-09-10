@@ -12,6 +12,9 @@ arrow.onclick = function () {
 let btnr = document.querySelector('.btnr');
 let btnres = document.querySelector('.btnres');
 let btnbck = document.querySelector('.btnbck');
+let finalResulte = document.querySelector('.finalResulte');
+let resulteReport = document.querySelector('.resulteReport');
+let resulteBtn = document.querySelector('.resulteBtn');
 let usInResulte = document.querySelector('.usInResulte');
 let usOutResulte = document.querySelector('.usOutResulte');
 let usResulteHistory = document.querySelector('.usResulteHistory');
@@ -26,7 +29,7 @@ let themResulte = 0;
 let tempThemOutResulte = 0;
 let tempThemInResulte = 0;
 let tempThemResulteHistory = '';
-btnr.onclick = function () {
+btnr.onclick = function resulte() {
     tempUsOutResulte = usOutResulte.textContent;
     tempUsInResulte = usInResulte.value;
     tempUsResulteHistory = usResulteHistory.value;
@@ -42,20 +45,49 @@ btnr.onclick = function () {
     themOutResulte.innerHTML = Number(themOutResulte.textContent) + Number(themInResulte.value);
     themResulteHistory.innerHTML += '\n' + String(tempThemInResulte) + '\n' + '-'.repeat(10) + '\n' + String(themResulte);
     themInResulte.value = '';
+    if (usResulte > 152 || themResulte > 152) {
+        finalResulte.classList.toggle('resulteShow');
+        usInResulte.value = '';
+        usResulteHistory.innerHTML = '';
+        themInResulte.value = '';
+        themResulteHistory.innerHTML = '';
+        if (usResulte > themResulte) {
+            resulteReport.innerHTML = `
+            مبروك لنا <br>
+            النتيجة: لنا ${usResulte} vs لهم ${themResulte}
+            `;
+        } else {
+            resulteReport.innerHTML = `
+            مبروك لهم ^_^ <br>
+            النتيجة: لنا ${usResulte}\t vs\t لهم ${themResulte}
+            `;
+        }
+    }
 }
-btnres.onclick = function () {
+btnres.onclick = function rest() {
     usOutResulte.innerHTML = 0;
     usInResulte.value = '';
     usResulteHistory.innerHTML = '';
     themOutResulte.innerHTML = 0;
     themInResulte.value = '';
     themResulteHistory.innerHTML = '';
+    finalResulte.classList.remove('resulteShow');
 }
-btnbck.onclick = function () {
+btnbck.onclick = function back() {
     usOutResulte.innerHTML = tempUsOutResulte;
     usInResulte.value = tempUsInResulte;
     usResulteHistory.innerHTML = tempUsResulteHistory;
     themOutResulte.innerHTML = tempThemOutResulte;
     themInResulte.value = tempThemInResulte;
     themResulteHistory.innerHTML = tempThemResulteHistory;
+    finalResulte.classList.remove('resulteShow');
+}
+resulteBtn.onclick = function () {
+    usOutResulte.innerHTML = 0;
+    usInResulte.value = '';
+    usResulteHistory.innerHTML = '';
+    themOutResulte.innerHTML = 0;
+    themInResulte.value = '';
+    themResulteHistory.innerHTML = '';
+    finalResulte.classList.remove('resulteShow');
 }
