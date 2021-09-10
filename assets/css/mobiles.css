@@ -35,7 +35,7 @@
 }
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 /* ----- HEADER AND NAV ----- */
@@ -249,15 +249,6 @@ body {
     align-items: center;
     padding: 25px;
 }
-.balotCalculator .title {
-    position: relative;
-    width: 100%;
-    min-height: 77px;
-    max-height: 77px;
-    text-align: center;
-    /* background-color: rgba(0, 0, 0, 0.5); */
-    border-radius: 10px;
-}
 .balotCalculator .calculator {
     position: relative;
     width: 100%;
@@ -267,7 +258,6 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    transform: translateY(-25px);
     background-color: rgba(0, 0, 0, 0.5);
     box-shadow: 1px 1px 15px 15px rgba(0, 0, 0, 0.35);
     border-radius: 10px;
